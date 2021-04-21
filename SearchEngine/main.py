@@ -1,12 +1,14 @@
 import requests
 import config
+import login
 import json
 import time
 from bs4 import BeautifulSoup
 
+(wcs_bt, JSESSIONID) = login.get_session()
+
 while True:
     time.sleep(60)
-
     # 최신 게시물의 id값 가져오기
     with open('./page.json', 'r') as f:
         json_data =json.load(f)
@@ -20,7 +22,7 @@ while True:
         'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
         'Cache-Control': 'max-age=0',
         'Connection': 'keep-alive',
-        'Cookie': config.cookie,
+        'Cookie': config.cookie + "JSESSIONID=" + JSESSIONID + "; wcs_bt=" + wcs_bt,
         'Host': 'swmaestro.org',
         'Referer': 'https://swmaestro.org/sw/member/user/toLogin.do',
         'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="90", "Google Chrome";v="90"',
@@ -34,8 +36,15 @@ while True:
 
     url = "https://swmaestro.org/sw/mypage/mentoLec/list.do?menuNo=200046"
     r = requests.get(url=url, headers=head)
+    print(r.text)
     soup = BeautifulSoup(r.content, 'html.parser')
     result = soup.select('#contentsList > div > div > div > table > tbody > tr')
+
+    # 로그인이 안된 경우
+    if not result:
+        (wcs_bt, JSESSIONID) = login.get_session()
+        continue
+
     for target in result:
         t = target.select('td.tit > div.rel > a')
         title = t[0].get_text()
@@ -53,7 +62,7 @@ while True:
         # 마지막 게시물보다 큰 값이 발견되면 알림!
         if num > json_data['page']:
             updated = True
-            requests.get("http://localhost:3000?URL="+link+"&title="+title)
+            # requests.get("http://localhost:3000?URL="+link+"&title="+title)
             if max_page < num:
                 max_page = num
 
