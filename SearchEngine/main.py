@@ -7,10 +7,8 @@ from bs4 import BeautifulSoup
 
 (wcs_bt, JSESSIONID) = login.get_session()
 
-a = 10
-while a:
-    # time.sleep(60)
-    a -= 1
+while True:
+    time.sleep(60)
     # 최신 게시물의 id값 가져오기
     with open('./page.json', 'r') as f:
         json_data =json.load(f)
