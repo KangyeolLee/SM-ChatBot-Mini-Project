@@ -5,7 +5,7 @@ import json
 import time
 from bs4 import BeautifulSoup
 
-(wcs_bt, JSESSIONID) = login.get_session()
+(wcs_bt, JSESSIONID) = " ", ""
 
 while True:
     time.sleep(60)
@@ -36,7 +36,6 @@ while True:
 
     url = "https://swmaestro.org/sw/mypage/mentoLec/list.do?menuNo=200046"
     r = requests.get(url=url, headers=head)
-    print(r.text)
     soup = BeautifulSoup(r.content, 'html.parser')
     result = soup.select('#contentsList > div > div > div > table > tbody > tr')
 
@@ -62,7 +61,7 @@ while True:
         # 마지막 게시물보다 큰 값이 발견되면 알림!
         if num > json_data['page']:
             updated = True
-            # requests.get("http://localhost:3000?URL="+link+"&title="+title)
+            requests.get("http://localhost:3000?URL="+link+"&title="+title)
             if max_page < num:
                 max_page = num
 
