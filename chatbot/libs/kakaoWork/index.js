@@ -34,3 +34,6 @@ exports.sendMessage = async ({ conversationId, text, blocks }) => {
     const res = await kakaoInstance.post('/v1/messages.send', data);
     return res.data.message;
 };
+
+    
+    

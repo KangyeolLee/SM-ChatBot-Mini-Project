@@ -48,7 +48,7 @@ router.get("/", async (req, res, next) => {
     messages,
   });
 });
-
+ 
 // 챗봇 유저 상호작용 요청
 router.post("/request", async (req, res, next) => {
   const { message, value } = req.body;
