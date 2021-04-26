@@ -61,7 +61,7 @@ while True:
         # 마지막 게시물보다 큰 값이 발견되면 알림!
         if num > json_data['page']:
             updated = True
-            requests.get("http://localhost:3000?URL="+link+"&title="+title)
+            requests.get("http://localhost:3000/new?URL="+link+"&title="+title)
             if max_page < num:
                 max_page = num
 
