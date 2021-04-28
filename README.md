@@ -17,9 +17,9 @@ main logo
 
 ## Key Features
 - Notification 
-    - Notify user of a new lecture
+    - Notify user of a new lecture.
 - Categorizing
-    - Imediatley see what you select category
+    - immediately see what you select category.
 
 <br>
 
@@ -28,7 +28,7 @@ main logo
 You don't need to know. When a new lecture comes up, you'll get a notification. That's all
 
 2. Categorizing   
-After typing keyword, you'll get the list of lectures being accepted
+After typing keyword, you'll get the list of lectures being accepted that related to keyword
 
 <br>
 
