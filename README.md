@@ -12,7 +12,6 @@
 
 
 ## Key Features
----
 - Notification 
     - Notify user of a new lecture
 - Categorizing
@@ -21,7 +20,6 @@
 <br>
 
 ## How To Use
----
 1. Notify you of the new lecture   
 You don't need to know. When a new lecture comes up, you'll get a notification. That's all
 
@@ -31,7 +29,6 @@ After typing keyword, you'll get the list of lectures being accepted
 <br>
 
 ## Why Use?
----
 ### Problem
 - There are many many lectures in SoMa. Many lectures will be added in the futre. 
 - But you can't always look into the homepage to apply for the classes that you want. 
@@ -44,7 +41,6 @@ After typing keyword, you'll get the list of lectures being accepted
 <br>
 
 ## Made By
----
 ### Alida
 SoMa mini project - 11st team
 
