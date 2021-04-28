@@ -25,10 +25,10 @@ main logo
 
 ## How To Use
 1. Notify you of the new lecture   
-You don't need to know. When a new lecture comes up, you'll get a notification. That's all
+You don't need to know. When a new lecture comes up, you'll get a notification. That's all.
 
 2. Categorizing   
-After typing keyword, you'll get the list of lectures being accepted that related to keyword
+After typing keyword, you'll get the list of lectures being accepted that related to keyword.
 
 <br>
 
@@ -39,7 +39,7 @@ After typing keyword, you'll get the list of lectures being accepted that relate
 
 ### We solve it!
 - You don't need to check the homapage periodically anymore.
-- Our chat bot will notify you of a new lecture
+- Our chat bot will notify you of a new lecture.
 - Also you can see list of past lectures that you wants.
 
 <br>
