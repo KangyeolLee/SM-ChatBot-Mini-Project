@@ -17,30 +17,30 @@ main logo
 
 ## Key Features
 - Notification 
-    - Notify user of a new lecture.
+    - 새로운 특강이 등록되면 사용자에게 알려줍니다.
 - Categorizing
-    - immediately see what you select category.
+    - 사용자가 정한 키워드에 맞는 특강 중 접수 중인 것들의 목록을 보여줍니다.
 
 <br>
 
 ## How To Use
-1. Notify you of the new lecture   
-You don't need to know. When a new lecture comes up, you'll get a notification. That's all.
+1. Notification   
+사용자가 신경쓸 부분은 없습니다. 강의가 등록되면, 챗봇을 통해 특강에 대한 메세지를 받을 수 있습니다.
 
 2. Categorizing   
-After typing keyword, you'll get the list of lectures being accepted that related to keyword.
+키워드를 입력할 수 있는 모달이 있고, 키워드를 입력하면 그에 맞는 특강 중 접수 중인 것들의 목록을 확인할 수 있습니다.
 
 <br>
 
 ## Why Use?
 ### Problem
-- There are many many lectures in SoMa. Many lectures will be added in the futre. 
-- But you can't always look into the homepage to apply for the classes that you want. 
+- SW 마에스트로에는 많은 멘토링, 특강이 있고 앞으로도 계속해서 추가될 것입니다.
+- 하지만 원하는 특강과 멘토링을 신청하기 위해 하루종일 홈페이지를 들여다 볼 수는 없습니다.
 
 ### We solve it!
-- You don't need to check the homapage periodically anymore.
-- Our chat bot will notify you of a new lecture.
-- Also you can see list of past lectures that you wants.
+- 이제 더이상 홈페이지를 주기적으로 확인할 필요가 없습니다.
+- Alida가 새로운 강의에 대해 알려줄겁니다.
+- 이미 지난 강의들에 대해서도 키워드 입력을 통해 확인할 수 있습니다.
 
 <br>
 
