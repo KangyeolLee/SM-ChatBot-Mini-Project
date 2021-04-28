@@ -1,5 +1,6 @@
 <p align="center">
-main logo
+    <img src="https://user-images.githubusercontent.com/34786282/116355684-286e9180-a835-11eb-8f68-2d9d79b1cdb3.PNG">
+    </img>
 </p>
 <h1 align="center">Alida</h1>
 
