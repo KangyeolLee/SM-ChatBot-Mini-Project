@@ -1,12 +1,16 @@
+<p align="center">
+main logo
+</p>
+<h1 align="center">Alida</h1>
 
-<center>main logo</center>
+<h3 align="center">The Easiest way to check a new SoMa Lecture</h3>
 
-# <center>Alida</center>
-
-
-### <center>The Easiest way to check a new SoMa Lecture</center>    
-
-#### <center> [Key Features](#key-features) • [How To Use](#how-to-use)  • [Why Use?](#why-use?) • [Made By](#made-by)</center>
+<h4 align="center">
+    <a href="#key-features">Key Features</a> &nbsp; • &nbsp;   
+    <a href="#how-to-use">How To Use</a> &nbsp; •&nbsp;  
+    <a href="#why-use?">Why Use?</a> &nbsp; • &nbsp;  
+    <a href="#made-by">Made By</a>
+</h4>
 <br>
 
 
