@@ -41,7 +41,6 @@ router.post("/request", async (req, res, next) => {
 
   switch (value) {
     case "cafe_survey":
-      // 설문조사용 모달 전송
       return res.json({
         view: {
           title: "관심분야 선정",
@@ -60,7 +59,7 @@ router.post("/request", async (req, res, next) => {
 
 // 챗봇 유저 상호작용 리턴값 응답
 router.post("/callback", async (req, res, next) => {
-  const { message, actions, action_time, value } = req.body; // 설문조사 결과 확인 (2)
+  const { message, actions, action_time, value } = req.body;
 
   switch (value) {
     case "category_survey_results":
@@ -102,77 +101,21 @@ router.post("/callback", async (req, res, next) => {
   }
 });
 
+// 주기적으로 새로운 강의 알림
 router.get("/new", async (req, res, next) => {
-  console.log(req.query);
-  // 유저 목록 검색 (1)
+  const { URL, menuNo, title, date, name } = req.query;
   const users = await libKakaoWork.getUserList();
 
-  // 검색된 모든 유저에게 각각 채팅방 생성 (2)
   const conversations = await Promise.all(
     users.map((user) => libKakaoWork.openConversations({ userId: user.id }))
   );
 
-  // 생성된 채팅방에 메세지 전송 (3)
   const messages = await Promise.all([
     conversations.map((conversation) =>
       libKakaoWork.sendMessage({
         conversationId: conversation.id,
         text: "새로운 강의가 추가되었습니다.",
-        blocks: [
-          {
-            type: "header",
-            text: "강의가 추가되었습니다 📢",
-            style: "blue",
-          },
-          {
-            type: "image_link",
-            url: "https://swm-chatbot-zorlne-xck4ah.run.goorm.io/logo.PNG",
-          },
-          {
-            type: "description",
-            term: "강의명",
-            content: {
-              type: "text",
-              text: req.query.title,
-              markdown: false,
-            },
-            accent: true,
-          },
-          {
-            type: "description",
-            term: "시작날짜",
-            content: {
-              type: "text",
-              text: "날짜날짜",
-              markdown: false,
-            },
-            accent: true,
-          },
-          {
-            type: "description",
-            term: "멘토이름",
-            content: {
-              type: "text",
-              text: "이름이름",
-              markdown: false,
-            },
-            accent: true,
-          },
-          {
-            type: "divider",
-          },
-          {
-            type: "button",
-            text: "신청하기",
-            style: "primary",
-            action_type: "open_system_browser",
-            value:
-              "https://swmaestro.org" +
-              req.query.URL +
-              "&menuNo=" +
-              req.query.menuNo,
-          },
-        ],
+        blocks: blockKitsPack.newUpdateMessage(URL, menuNo, title, date, name),
       })
     ),
   ]);
