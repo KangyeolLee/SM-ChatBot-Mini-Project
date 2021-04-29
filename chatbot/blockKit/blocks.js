@@ -1,3 +1,4 @@
+// 첫 API 요청 시 안내 메시지
 exports.firstGuideMessage = [
   {
     type: "header",
@@ -19,6 +20,7 @@ exports.firstGuideMessage = [
   },
 ];
 
+// 유저 키워드 입력 모달 메시지
 exports.surveyModalMessage = [
   {
     type: "label",
@@ -64,11 +66,12 @@ exports.surveyModalMessage = [
   },
 ];
 
-exports.callbackMessage = [
+// 키워드 입력 대응 콜백 메시지 생성 함수
+exports.callbackMessage = (keyword) => [
   {
     type: "text",
     text:
-      "입력하신 정보를 바탕으로 찾아보고 있어요..! 👍 \n 조금만 기다려 주시면 곧 안내 드릴게요~ 😉",
+      "입력하신 정보를 바탕으로 찾아보고 있어요..! 👍 \n조금만 기다려 주시면 곧 안내 드릴게요~ 😉",
     markdown: true,
   },
   {
@@ -81,25 +84,27 @@ exports.callbackMessage = [
     term: "입력",
     content: {
       type: "text",
-      text: actions.category,
+      text: keyword,
       markdown: false,
     },
     accent: true,
   },
 ];
 
-exports.keywordResultMessage = [
+// 입력된 키워드로 강의 알림 헤더 메시지 생성 함수
+exports.makeKeywordResultMessage = (keyword) => [
   {
     type: "header",
-    text: "[" + actions.category + "] 분야 모집 중 멘토링",
+    text: "[" + keyword + "] 분야 모집 중 멘토링",
     style: "yellow",
   },
   {
     type: "image_link",
-    url: "https://swm-chatbot-zorlne-xck4ah.run.goorm.io/logo.PNG",
+    url: "https://swm-chatbot-zorlne-xck4ah.run.goorm.io/logo.png",
   },
 ];
 
+// 결과가 없을 시 출력 메시지
 exports.noResultMessage = [
   {
     type: "image_link",
@@ -113,6 +118,7 @@ exports.noResultMessage = [
   },
 ];
 
+// 강의 목록 하나의 메시지로 구성하는 함수
 exports.makeBlockKitPackage = (pendingList) => {
   const blocks = [];
 
@@ -165,3 +171,57 @@ exports.makeBlockKitPackage = (pendingList) => {
 
   return blocks;
 };
+
+// 새로운 강의가 등록되었을 시 출력 메시지 생성 함수
+exports.newUpdateMessage = (URL, menuNo, title, date, name) => [
+  {
+    type: "header",
+    text: "강의가 추가되었습니다 📢",
+    style: "blue",
+  },
+  {
+    type: "image_link",
+    url: "https://swm-chatbot-zorlne-xck4ah.run.goorm.io/logo.png",
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "description",
+    term: "강의명",
+    content: {
+      type: "text",
+      text: title,
+      markdown: false,
+    },
+    accent: true,
+  },
+  {
+    type: "description",
+    term: "시작날짜",
+    content: {
+      type: "text",
+      text: date,
+      markdown: false,
+    },
+    accent: true,
+  },
+  {
+    type: "description",
+    term: "멘토이름",
+    content: {
+      type: "text",
+      text: name,
+      markdown: false,
+    },
+    accent: true,
+  },
+
+  {
+    type: "button",
+    text: "신청하기",
+    style: "primary",
+    action_type: "open_system_browser",
+    value: "https://swmaestro.org" + URL + "&menuNo=" + menuNo,
+  },
+];
