@@ -4,7 +4,7 @@ module.exports = {
       name: "app",
       script: "npm",
       args: "start",
-      instances: 0,
+      instances: 4,
       exec_mode: "cluster",
     },
   ],
