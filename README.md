@@ -8,10 +8,11 @@
 
 <h4 align="center">
     <a href="#key-features">Key Features</a> &nbsp; • &nbsp;   
-    <a href="#block-kit-classification">Block Kit Classification</a> &nbsp; • &nbsp;   
     <a href="#how-to-use">How To Use</a> &nbsp; •&nbsp;  
     <a href="#why-use">Why Use</a> &nbsp; • &nbsp;  
+    <a href="#block-kit-classification">Block Kit Classification</a> &nbsp; • &nbsp;
     <a href="#made-by">Made By</a>
+
 </h4>
 <br>
 
@@ -26,18 +27,6 @@
   - 사용자가 정한 키워드에 맞는 특강 중 접수 중인 것들의 목록을 보여줍니다.
 
 <br/>
-
-## Block Kit classification
-
-|                                                            type                                                             |                                                  description                                                   |
-| :-------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
-| <img width=400 src="https://user-images.githubusercontent.com/48883344/116414108-29261880-a873-11eb-8e40-ffd294b97c8c.png"> |               알리다 챗봇 첫 알림 메시지 입니다. <br/> 입력하기를 통해 키워드 입력이 가능합니다.               |
-| <img width=400 src="https://user-images.githubusercontent.com/48883344/116414098-275c5500-a873-11eb-9a3c-5d5d9fbb993d.png"> |                 입력 키워드 작성 후 안내 메시지 입니다. <br/> 검색 결과 출력 전에 표시됩니다.                  |
-| <img width=400 src="https://user-images.githubusercontent.com/48883344/116414106-288d8200-a873-11eb-8d95-46b532265163.png"> |                         입력된 키워드 기준 검색 결과가 없을 시 출력되는 메시지 입니다.                         |
-| <img width=300 src="https://user-images.githubusercontent.com/48883344/116414103-288d8200-a873-11eb-8ae1-9e1b2d2af85e.png"> | 새로운 특강이 등록되었을 때를 감지하여 주기적으로 알려주는 특강 메시지 입니다. <br/> 파란색 헤더로 구분합니다. |
-| <img width=300 src="https://user-images.githubusercontent.com/48883344/116414100-27f4eb80-a873-11eb-9121-735cc49e7060.png"> |      사용자 검색 키워드 기준으로 추출되는 특강을 알려주는 메시지 입니다. <br/> 노란색 헤더로 구분합니다.       |
-
-<br>
 
 ## How To Use
 
@@ -99,6 +88,18 @@
 - 이제 더이상 홈페이지를 주기적으로 확인할 필요가 없습니다.
 - ALIDA 새로운 강의에 대해 알려줄겁니다.
 - 이미 지난 강의들에 대해서도 키워드 입력을 통해 확인할 수 있습니다.
+
+<br>
+
+## Block Kit classification
+
+|                                                            type                                                             |                                                  description                                                   |
+| :-------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+| <img width=400 src="https://user-images.githubusercontent.com/48883344/116414108-29261880-a873-11eb-8e40-ffd294b97c8c.png"> |               알리다 챗봇 첫 알림 메시지 입니다. <br/> 입력하기를 통해 키워드 입력이 가능합니다.               |
+| <img width=400 src="https://user-images.githubusercontent.com/48883344/116414098-275c5500-a873-11eb-9a3c-5d5d9fbb993d.png"> |                 입력 키워드 작성 후 안내 메시지 입니다. <br/> 검색 결과 출력 전에 표시됩니다.                  |
+| <img width=400 src="https://user-images.githubusercontent.com/48883344/116414106-288d8200-a873-11eb-8d95-46b532265163.png"> |                         입력된 키워드 기준 검색 결과가 없을 시 출력되는 메시지 입니다.                         |
+| <img width=300 src="https://user-images.githubusercontent.com/48883344/116414103-288d8200-a873-11eb-8ae1-9e1b2d2af85e.png"> | 새로운 특강이 등록되었을 때를 감지하여 주기적으로 알려주는 특강 메시지 입니다. <br/> 파란색 헤더로 구분합니다. |
+| <img width=300 src="https://user-images.githubusercontent.com/48883344/116414100-27f4eb80-a873-11eb-9121-735cc49e7060.png"> |      사용자 검색 키워드 기준으로 추출되는 특강을 알려주는 메시지 입니다. <br/> 노란색 헤더로 구분합니다.       |
 
 <br>
 
