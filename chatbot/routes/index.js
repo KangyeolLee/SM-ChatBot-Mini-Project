@@ -10,6 +10,13 @@ const BLOCKS_LENGTH = 5; // 하나의 특강 정보가 가지고 있는 블록�
 const PER_LIMIT = 9; // 하나의 메시지에 표현할 최대 특강 개수
 const limit = BLOCKS_LENGTH * PER_LIMIT;
 
+// 서버 상태 체크
+router.get("/", async (req, res, next) => {
+  res.json({
+    msg: "server is running well!",
+  });
+});
+
 // 상호 평가 대응 API 요청 (기본 전송과 로직은 동일)
 router.post("/chatbot", async (req, res, next) => {
   const users = await libKakaoWork.getUserList();
@@ -36,7 +43,7 @@ router.post("/chatbot", async (req, res, next) => {
 });
 
 // 기본 챗봇 전송 요청
-router.get("/", async (req, res, next) => {
+router.get("/send", async (req, res, next) => {
   const users = await libKakaoWork.getUserList();
 
   const conversations = await Promise.all(
