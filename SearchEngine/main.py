@@ -15,7 +15,7 @@ while True:
 
     max_page = json_data['page']
     updated = False
-
+    
     head = {
         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
         'Accept-Encoding': 'gzip, deflate, br',
@@ -46,6 +46,9 @@ while True:
 
     for target in result:
         t = target.select('td.tit > div.rel > a')
+        date = target.select('td:nth-of-type(4)')[0].get_text();
+        name = target.select('td:nth-of-type(7)')[0].get_text();
+        print(date, name)
         title = t[0].get_text()
         link = t[0]['href']
         index = 37
@@ -61,7 +64,7 @@ while True:
         # 마지막 게시물보다 큰 값이 발견되면 알림!
         if num > json_data['page']:
             updated = True
-            requests.get("http://localhost:3000/new?URL="+link+"&title="+title)
+            requests.get("http://localhost:3000/new?URL="+link+"&title="+title+"&date="+date+"&name="+name)
             if max_page < num:
                 max_page = num
 
